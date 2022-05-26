@@ -78,7 +78,8 @@ class cek_biokimia:
     
     
     def hdl(hdl):
-        
+        if hdl < 200:
+            pass
         return 0 
     
     
