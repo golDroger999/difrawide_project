@@ -1,8 +1,6 @@
 import streamlit as st
 import sys
 
-# from streamlit.cli import main
-# from streamlit.proto.RootContainer_pb2 import RootContainer
 
 sys.path.append('')
 from web_gizi_individu.menu_individu import pilihan_rumus_gizi_individu
