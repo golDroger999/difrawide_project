@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run main_app.py
+streamlit run streamlit_app.py --server.port $PORT --server.headless true
