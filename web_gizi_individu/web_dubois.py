@@ -155,11 +155,11 @@ def web_individu_dubois():
     
     if st.button('LAPORAN'):
         
-            if jenis_kelamin == 'pria':
-                bmr_code = 1
+        if jenis_kelamin == 'pria':
+            bmr_code = 1
             
-            elif jenis_kelamin == 'wanita':
-                bmr_code = 0.9
+        elif jenis_kelamin == 'wanita':
+            bmr_code = 0.9
                 
                 
             doc    = DocxTemplate('web_gizi_individu/DUBOIS.docx')
@@ -211,9 +211,15 @@ def web_individu_dubois():
                 'tanggal'      : tanggal
                 }
             
-            doc.render(context=context)
-            out = doc.save(f'{nama}.docx')
+            out = doc.render(context=context)
+            # out = doc.save(f'{nama}.docx')
             st.success('SUKSES MEMBUAT LAPORAN')
+            
+            st.download_button(
+            'DOWNLOAD LAPORAN',
+            data = out,
+            file_name=f'{nama}'    
+            )
             
             # hasil = base64.b64encode(out.encode()).decode()  # some strings <-> bytes conversions necessary here
             # href = f'<a href="data:file/csv;base64,{hasil}">Download csv file</a>'
