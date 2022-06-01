@@ -152,7 +152,7 @@ def web_perkeni_2015():
                 
                 
             
-            doc = DocxTemplate('PERKENI.docx')
+            doc = DocxTemplate('web_gizi_individu/PERKENI.docx')
             
             context = {
                     'nama'    : nama, 
