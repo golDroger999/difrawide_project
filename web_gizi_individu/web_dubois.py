@@ -151,7 +151,9 @@ def web_individu_dubois():
                 kharbo  = st.success(f'KHARBOHIDRAT : {kharbohidrat_malam}')
     
     st.write('---------------------------------------------------------')
-    if st._button('LAPORAN'):
+    
+    
+    if st.button('LAPORAN'):
         
             if jenis_kelamin == 'pria':
                 bmr_code = 1
