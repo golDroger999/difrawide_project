@@ -98,7 +98,8 @@ def web_individu_dubois():
     protein_malam      = makan_malam_dubois.protein(bb=berat, tb=tinggi, usia=usia, sex=jenis_kelamin, aktivitas=persen_aktivitas, tidur=tidur)
     lemak_malam        = makan_malam_dubois.lemak(bb=berat, tb=tinggi, usia=usia, sex=jenis_kelamin, aktivitas=persen_aktivitas, tidur=tidur)
     kharbohidrat_malam = makan_malam_dubois.kharbohidrat(berat, tinggi, usia, jenis_kelamin, persen_aktivitas, tidur)
-    if(st.form_submit_button('HITUNG')):
+    
+    if(st.button('HITUNG')):
         
         with st.expander('HASIL PERHITUNGAN DENGAN RUMUS DUBOIS'):
             st.write('''---------------------------------''')
@@ -150,7 +151,7 @@ def web_individu_dubois():
                 kharbo  = st.success(f'KHARBOHIDRAT : {kharbohidrat_malam}')
     
     st.write('---------------------------------------------------------')
-    if st.form_submit_button('LAPORAN'):
+    if st._button('LAPORAN'):
         
             if jenis_kelamin == 'pria':
                 bmr_code = 1
