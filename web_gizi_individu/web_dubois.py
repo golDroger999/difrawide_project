@@ -211,8 +211,8 @@ def web_individu_dubois():
                 'tanggal'      : tanggal
                 }
             
-            out = doc.render(context=context)
-            # out = doc.save(f'{nama}.docx')
+            doc.render(context=context)
+            out = doc.save(f'{nama}.docx')
             st.download_button(
             'DOWNLOAD LAPORAN',
             data = out,
