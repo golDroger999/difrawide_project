@@ -163,7 +163,7 @@ def web_individu_dubois():
                     bmr_code = 0.9
                     
                     
-                doc    = DocxTemplate('DUBOIS.docx')
+                doc    = DocxTemplate('web_gizi_individu/DUBOIS.docx')
                 context = {
                     'nama'    : nama, 
                     'usia'    : f'{usia} ', 
