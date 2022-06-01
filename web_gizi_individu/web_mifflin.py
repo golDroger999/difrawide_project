@@ -125,7 +125,7 @@ def web_mifflin():
             elif gender == 'wanita':
                 plus = 161
                 
-            doc = DocxTemplate('/home/gol/Documents/koding/difrawide_project/web_gizi_individu/MIFFLIN.docx')
+            doc = DocxTemplate('MIFFLIN.docx')
             
             context = {
                     'nama'    : nama, 

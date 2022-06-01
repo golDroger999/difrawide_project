@@ -158,7 +158,7 @@ def web_gizi_wanita_menyusui():
                 karboplus = 55
             
                 
-            doc    = DocxTemplate('/home/gol/Documents/koding/difrawide_project/web_gizi_individu/IBU MENYUSUI.docx')
+            doc    = DocxTemplate('IBU MENYUSUI.docx')
             
             context = {
                     'nama'    : nama, 

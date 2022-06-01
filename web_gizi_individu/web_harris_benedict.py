@@ -169,7 +169,7 @@ aktivitas :
          
         if st.form_submit_button('LAPORAN'):
             
-            doc = DocxTemplate('/home/gol/Documents/koding/difrawide_project/web_gizi_individu/HARRIS BENEDICT.docx')
+            doc = DocxTemplate('HARRIS BENEDICT.docx')
             
             context = {
                     'nama'    : nama, 

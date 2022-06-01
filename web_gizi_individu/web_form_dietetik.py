@@ -338,7 +338,7 @@ def web_individu_form_dietetik():
             usiaparam = 4.7
         
         if st.form_submit_button('LAPORAN'):
-            doc = DocxTemplate('/home/gol/Documents/koding/difrawide_project/web_gizi_individu/ASSASMEN GIZI.docx')
+            doc = DocxTemplate('ASSASMEN GIZI.docx')
             
             context = {
                 

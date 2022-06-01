@@ -141,7 +141,7 @@ def web_ginjal():
             elif usia > 60:
                 energicode = 30
                 
-            doc    = DocxTemplate('/home/gol/Documents/koding/difrawide_project/web_gizi_individu/GINJAL.docx')
+            doc    = DocxTemplate('GINJAL.docx')
 
             context = {
                     'nama'    : nama, 

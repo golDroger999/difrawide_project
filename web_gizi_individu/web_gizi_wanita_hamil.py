@@ -170,7 +170,7 @@ def web_gizi_wanita_hamil():
                                 
                  
         
-            doc    = DocxTemplate('/home/gol/Documents/koding/difrawide_project/web_gizi_individu/IBU HAMIL.docx')
+            doc    = DocxTemplate('IBU HAMIL.docx')
             
             context = {
                     'nama'    : nama, 
