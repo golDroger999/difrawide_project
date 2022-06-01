@@ -216,8 +216,8 @@ def web_individu_dubois():
                 out = doc.save(f'{nama}.docx')
                 st.success('SUKSES MEMBUAT LAPORAN')
                 
-                def download_out(file=out):
-                    return open(file=file)
-                download_out()
+                # def download_out(file=out):
+                #     return open(file=file)
+                # download_out()
 
 
