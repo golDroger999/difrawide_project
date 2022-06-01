@@ -219,5 +219,7 @@ def web_individu_dubois():
                 # def download_out(file=out):
                 #     return open(file=file)
                 # download_out()
+                b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+                href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'
 
 
