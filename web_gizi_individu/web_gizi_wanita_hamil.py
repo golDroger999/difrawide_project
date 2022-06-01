@@ -141,7 +141,7 @@ def web_gizi_wanita_hamil():
         
         st.write('---------------------------------------------------------')
         
-        if st.form_submit_button('LAPORAN'):
+    if st.download_button('LAPORAN'):
             
             if trisemester == 'TRI SEMESTER 1':
                 energiplus = 180
