@@ -215,11 +215,12 @@ def web_individu_dubois():
             # out = doc.save(f'{nama}.docx')
             st.success('SUKSES MEMBUAT LAPORAN')
             
-            st.download_button(
-            'DOWNLOAD LAPORAN',
-            data = out,
-            file_name=f'{nama}'    
-            )
+            if out:
+                st.download_button(
+                'DOWNLOAD LAPORAN',
+                data = out,
+                file_name=f'{nama}'    
+                )
             
             # hasil = base64.b64encode(out.encode()).decode()  # some strings <-> bytes conversions necessary here
             # href = f'<a href="data:file/csv;base64,{hasil}">Download csv file</a>'
