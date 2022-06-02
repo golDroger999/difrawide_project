@@ -217,6 +217,6 @@ aktivitas :
             }
             
             doc.render(context=context)
-            doc.save(f'Download/{nama}.docx')
+            doc.save(f'{nama}.docx')
             st.success('SUKSES MEMBUAT LAPORAN')
             
