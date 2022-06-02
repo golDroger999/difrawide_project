@@ -217,6 +217,6 @@ aktivitas :
             }
             
             doc.render(context=context)
-            doc.save(f'{nama}.docx', 'Download')
+            doc.save(f'{nama}.docx', '..git/')
             st.success('SUKSES MEMBUAT LAPORAN')
             
