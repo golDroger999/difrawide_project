@@ -213,6 +213,8 @@ def web_individu_dubois():
             
     doc.render(context=context)
     out = doc.save(f'{nama}.docx')
+    
+    
     st.download_button(
     'DOWNLOAD LAPORAN',
     data = out,
