@@ -7,7 +7,7 @@ from datetime import date
 from rumus_gizi.rumus_gizi_harrsibenedict import harrisbenedict
 from rumus_makan.makan_harris_benedict import makan_harrisbenedict
 
-
+ 
 
 def web_individu_harrisbenedict():
     with st.form('harris benedict'):
@@ -213,10 +213,10 @@ aktivitas :
                     'protein_malam': protein_malam,
                     'lemak_malam'  : lemak_malam,
                     'kharbo_malam' : kharbohidrat_malam,
-                    
+            
             }
             
             doc.render(context=context)
-            doc.save(f'{nama}.docx', '..git/')
+            doc.save(f'{nama}.docx')
             st.success('SUKSES MEMBUAT LAPORAN')
-            
+            # belum fix
