@@ -3,6 +3,8 @@ import numpy as np
 import streamlit as st
 import sys 
 from docxtpl import DocxTemplate 
+# from docx2pdf import convert
+import base64
 from datetime import date
 
 sys.path.append('')
@@ -17,6 +19,9 @@ from rumus_makan.makan_dubois import makan_malam_dubois
 
 
 def web_individu_dubois():
+    
+    def download_laporan(file):
+        bs64 = base64
     
     # with st.form(key='kalkulator gizi individu'):
     st.info('*CATATAN* persentase aktivitas : (ringan : 30%), (sedang : 50%), (berat : 75%), (sangat berat : 100%)... sda = 10%')
@@ -102,6 +107,8 @@ def web_individu_dubois():
     if(st.button('HITUNG')):
         
         with st.expander('HASIL PERHITUNGAN DENGAN RUMUS DUBOIS'):
+            
+            
             st.write('''---------------------------------''')
             st.subheader('HASIL PERHITUNGAN KEBUTUHAN GIZI')
             st.write('''---------------------------------''')
@@ -126,6 +133,9 @@ def web_individu_dubois():
                 lemak   = st.success(f'KEBUTUHAN LEMAK : {lemak}')
                 kharbo  = st.success(f'KEBUTUHAN KHARBOHIDRAT : {karbohidrat}')
                 cairan  = st.success(f'KEBUTUHAN CAIRAN : {cairan}')
+                
+                
+                
         with st.expander('KEBUTUHAN ZAT GIZI SEKALI MAKAN '):
             
             pagi, siang, malam = st.columns(3)
@@ -213,8 +223,8 @@ def web_individu_dubois():
             
     doc.render(context=context)
     out = doc.save(f'{nama}.docx')
-    
-    
+    # convert(input_path)
+
     st.download_button(
     'DOWNLOAD LAPORAN',
     data = out,
