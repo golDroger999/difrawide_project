@@ -31,11 +31,10 @@ def pilihan_rumus_gizi_individu():
         
         with st.expander('PILIH JENIS RUMUS'):
 
-            pilih_form = st.radio('', ('FORM DIETETIK PENYAKIT (DENGAN RUMUS HARRIS BENEDICT)', 
-                                       'RUMUS PERKENI 2015 (DIABETES)',
+            pilih_form = st.radio('',  'RUMUS PERKENI 2015 (DIABETES)',
                                        'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
                                        'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)')
-                                  ) 
+                                 
 
         st.write('-----------------------------------------------------------')
         
