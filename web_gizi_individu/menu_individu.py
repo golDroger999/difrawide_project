@@ -37,18 +37,13 @@ def pilihan_rumus_gizi_individu():
                                  
 
         st.write('-----------------------------------------------------------')
-        
-        # if pilih_form == 'FORM DIETETIK PENYAKIT (DENGAN RUMUS HARRIS BENEDICT)':
-        #     st.subheader('FORM DIETETIK PENYAKIT')
-        #     web_individu_form_dietetik()
-        
+    
         if pilih_form == 'RUMUS PERKENI 2015 (DIABETES)':
             st.subheader('RUMUS PERKENI 2015 (DIABETES)')
             web_perkeni_2015()
         
         elif pilih_form == 'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)':
             st.subheader('RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)')
-            # st.error('sedang dalam pengembangan')
             web_mifflin()
             
         elif pilih_form =='RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)':
