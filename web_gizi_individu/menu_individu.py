@@ -33,9 +33,9 @@ def pilihan_rumus_gizi_individu():
 
             pilih_form = st.radio('',  'RUMUS PERKENI 2015 (DIABETES)',
                                        'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
-                                       'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)')
-                                 
-
+                                       'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)'
+                                )
+        
         st.write('-----------------------------------------------------------')
     
         if pilih_form == 'RUMUS PERKENI 2015 (DIABETES)':
