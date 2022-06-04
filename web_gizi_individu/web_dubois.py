@@ -19,10 +19,6 @@ from rumus_makan.makan_dubois import makan_malam_dubois
 
 
 def web_individu_dubois():
-    
-    def download_laporan(file):
-        bs64 = base64
-    
     # with st.form(key='kalkulator gizi individu'):
     st.info('*CATATAN* persentase aktivitas : (ringan : 30%), (sedang : 50%), (berat : 75%), (sangat berat : 100%)... sda = 10%')
     
