@@ -35,7 +35,7 @@ def pilihan_rumus_gizi_individu():
                                     'CEK BIOKIMIA',  
                                     'RUMUS PERKENI 2015 (DIABETES)',
                                     'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
-                                    'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)'
+                                    'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)',
                                 )
         
         st.write('-----------------------------------------------------------')
