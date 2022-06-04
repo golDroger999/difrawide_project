@@ -76,6 +76,8 @@ def pilihan_rumus_gizi_individu():
             st.subheader('ANALISA GIZI KHUSUS WANITA MENYUSUI')
             web_gizi_wanita_menyusui()
             
+
+pilihan_rumus_gizi_individu()
     
     
         

@@ -75,4 +75,4 @@ def energi(bbi, persen_aktifitas, waktu_tidur, sex, hasil_bmr):
     
 
 
-energi(bbi=57, persen_aktifitas=0.5, waktu_tidur=8, sex='pria', hasil_bmr=1340)
+# energi(bbi=57, persen_aktifitas=0.5, waktu_tidur=8, sex='pria', hasil_bmr=1340)
