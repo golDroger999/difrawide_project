@@ -32,11 +32,10 @@ def pilihan_rumus_gizi_individu():
         with st.expander('PILIH JENIS RUMUS'):
 
             pilih_form = st.radio('',
-                                    'CEK BIOKIMIA',  
+                                    ('CEK BIOKIMIA',  
                                     'RUMUS PERKENI 2015 (DIABETES)',
                                     'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
-                                    'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)',
-                                )
+                                    'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)'))
         
         st.write('-----------------------------------------------------------')
     
@@ -65,7 +64,7 @@ def pilihan_rumus_gizi_individu():
     elif pilihan == 'ANALISA GIZI KHUSUS WANITA':
         
         with st.expander('PILIH JENIS FORM'):
-            pilih_form = st.radio('', ('HAMIL', 'MENYUSUI')) 
+            pilih_form = st.radio('', ('HAMIL', 'MENYUSUI'), format_func=str) 
         st.write('-----------------------------------------------------------')
 
         if pilih_form == 'HAMIL':
@@ -75,9 +74,7 @@ def pilihan_rumus_gizi_individu():
         elif pilih_form == 'MENYUSUI':
             st.subheader('ANALISA GIZI KHUSUS WANITA MENYUSUI')
             web_gizi_wanita_menyusui()
-            
 
-pilihan_rumus_gizi_individu()
     
     
         
