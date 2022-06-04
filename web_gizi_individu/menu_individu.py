@@ -5,12 +5,12 @@ sys.path.append('')
 
 from web_gizi_individu.web_dubois import web_individu_dubois
 from web_gizi_individu.web_harris_benedict import web_individu_harrisbenedict
-# from web_gizi_individu.web_form_dietetik import web_individu_form_dietetik
 from web_gizi_individu.web_gizi_wanita_hamil import web_gizi_wanita_hamil
 from web_gizi_individu.web_gizi_wanita_menyusui import web_gizi_wanita_menyusui
 from web_gizi_individu.web_mifflin import web_mifflin
 from web_gizi_individu.web_perkeni_2015 import web_perkeni_2015
 from web_gizi_individu.web_gizi_ginjal import web_ginjal
+from web_gizi_individu.web_cek_biokimia import web_cek_biokimia
 
 
 
@@ -31,14 +31,20 @@ def pilihan_rumus_gizi_individu():
         
         with st.expander('PILIH JENIS RUMUS'):
 
-            pilih_form = st.radio('',  'RUMUS PERKENI 2015 (DIABETES)',
-                                       'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
-                                       'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)'
+            pilih_form = st.radio('',
+                                    'CEK BIOKIMIA',  
+                                    'RUMUS PERKENI 2015 (DIABETES)',
+                                    'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
+                                    'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)'
                                 )
         
         st.write('-----------------------------------------------------------')
     
-        if pilih_form == 'RUMUS PERKENI 2015 (DIABETES)':
+        if pilih_form == 'CEK BIOKIMIA':
+            st.subheader('CEK BIOKIMIA')
+            web_cek_biokimia()
+        
+        elif pilih_form == 'RUMUS PERKENI 2015 (DIABETES)':
             st.subheader('RUMUS PERKENI 2015 (DIABETES)')
             web_perkeni_2015()
         
