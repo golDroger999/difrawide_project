@@ -167,11 +167,11 @@ def web_individu_dubois():
         
         if jenis_kelamin == 'pria':
             bmr_code = 1
-            
+
         elif jenis_kelamin == 'wanita':
                 bmr_code = 0.9
-                    
-                    
+
+
         doc    = DocxTemplate('web_gizi_individu/DUBOIS.docx')
         context = {
             'nama'    : nama, 
@@ -180,8 +180,8 @@ def web_individu_dubois():
             'bmr_code': f'{bmr_code}',
             'berat'   : f'{berat} ', 
             'tinggi'  : f'{tinggi} ',
-          
-          
+
+
             'imt'     : imt,
             'bbi'     : f'{bbi}',
             'bmr'     : f'{bmr}',
@@ -192,47 +192,47 @@ def web_individu_dubois():
             'aktivitas_fisik' : f'{aktivitas_fisik}',
             "e"       : f'{e}',
             'sda'     : f'{sda}',
-          
-          
+
+
             'energi'  : f'{total_energi}',
             'protein' : f'{protein}',
             'lemak'   : f'{lemak}',
             'kharbo'  : f'{karbohidrat}',
             'cairan'  : f"{cairan}",
-          
-          
+
+
             'energi_pagi'  :energi_pagi,
             'protein_pagi' : protein_pagi,
             'lemak_pagi'   : lemak_pagi,
             'kharbo_pagi'  : kharbohidrat_pagi,
-          
-          
+
+
             'energi_siang' :energi_siang,
             'protein_siang': protein_siang,
             'lemak_siang'  : lemak_siang,
             'kharbo_siang' : kharbohidrat_siang,
             'energi_malam' :energi_malam,
-          
-          
+
+
             'protein_malam': protein_malam,
             'lemak_malam'  : lemak_malam,
             'kharbo_malam' : kharbohidrat_malam,
             'keluhan'      : keluhan,
             'tanggal'      : tanggal
             }
-                
+
         doc.render(context=context)
         out = doc.save(f'{nama}.docx')
         # convert(input_path)
-    
-        st.download_button(
-        'DOWNLOAD LAPORAN',
-        data = out,
-        file_name=f'{nama}'    
-        )
-                
+
+        # st.download_button(
+        # 'DOWNLOAD LAPORAN',
+        # data = out,
+        # file_name=f'{nama}'    
+        # )
+
         st.success('SUKSES MEMBUAT LAPORAN')
-                
+
             
             
             # hasil = base64.b64encode(out.encode()).decode()  # some strings <-> bytes conversions necessary here
