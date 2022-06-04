@@ -115,76 +115,76 @@ def web_ginjal():
                     kharbo  = st.success(f'KHARBOHIDRAT : {karbohidrat_malam}')
                     
                     
-        st.write('------------------------------')
+        # st.write('------------------------------')
         
         
-        if(st.form_submit_button('LAPORAN')):
-            # st.error('SEDANG DALAM PENGEMBANGAN')
+        # if(st.form_submit_button('LAPORAN')):
+        #     # st.error('SEDANG DALAM PENGEMBANGAN')
             
-            if kondisi == 'Haemodialisa':
-                kondisicode = 0.8
+        #     if kondisi == 'Haemodialisa':
+        #         kondisicode = 0.8
                 
-            elif kondisi == 'tanpa Haemodialisa':
-                kondisicode = 1.2
-                
-                
-            if gender == 'pria':
-                    bmrcode = 1
-                
-            elif gender == "wanita":
-                bmrcode = 0.9
+        #     elif kondisi == 'tanpa Haemodialisa':
+        #         kondisicode = 1.2
                 
                 
-            if usia <= 60:
-                energicode = 35
+        #     if gender == 'pria':
+        #             bmrcode = 1
                 
-            elif usia > 60:
-                energicode = 30
+        #     elif gender == "wanita":
+        #         bmrcode = 0.9
                 
-            doc    = DocxTemplate('web_gizi_individu/GINJAL.docx')
+                
+        #     if usia <= 60:
+        #         energicode = 35
+                
+        #     elif usia > 60:
+        #         energicode = 30
+                
+        #     doc    = DocxTemplate('web_gizi_individu/GINJAL.docx')
 
-            context = {
-                    'nama'    : nama, 
-                    'usia'    : f'{usia} ', 
-                    'sex'     : gender, 
-                    'kondisicode' : kondisicode,
-                    'bmrcode' : bmrcode,
-                    'energicode' : energicode,
-                    'berat'   : f'{berat} ', 
-                    'tinggi'  : f'{tinggi} ',
+        #     context = {
+        #             'nama'    : nama, 
+        #             'usia'    : f'{usia} ', 
+        #             'sex'     : gender, 
+        #             'kondisicode' : kondisicode,
+        #             'bmrcode' : bmrcode,
+        #             'energicode' : energicode,
+        #             'berat'   : f'{berat} ', 
+        #             'tinggi'  : f'{tinggi} ',
                     
-                    'tanggal' : tanggal,
-                    'imt'     : imt,
-                    'bbi'     : f'{bbi}',
-                    'bmr'     : f'{bmr}',
+        #             'tanggal' : tanggal,
+        #             'imt'     : imt,
+        #             'bbi'     : f'{bbi}',
+        #             'bmr'     : f'{bmr}',
                     
                     
-                    'energi'  : f'{energi}',
-                    'protein' : f'{protein}',
-                    'lemak'   : f'{lemak}',
-                    'kharbo'  : f'{karbohidrat}',
+        #             'energi'  : f'{energi}',
+        #             'protein' : f'{protein}',
+        #             'lemak'   : f'{lemak}',
+        #             'kharbo'  : f'{karbohidrat}',
                     
-                    'energi_pagi'  :energi_pagi,
-                    'protein_pagi' : protein_pagi,
-                    'lemak_pagi'   : lemak_pagi,
-                    'kharbo_pagi'  : karbohidrat_pagi,
+        #             'energi_pagi'  :energi_pagi,
+        #             'protein_pagi' : protein_pagi,
+        #             'lemak_pagi'   : lemak_pagi,
+        #             'kharbo_pagi'  : karbohidrat_pagi,
                   
                   
-                    'energi_siang' :energi_siang,
-                    'protein_siang': protein_siang,
-                    'lemak_siang'  : lemak_siang,
-                    'kharbo_siang' : karbohidrat_siang,
-                    'energi_malam' :energi_malam,
+        #             'energi_siang' :energi_siang,
+        #             'protein_siang': protein_siang,
+        #             'lemak_siang'  : lemak_siang,
+        #             'kharbo_siang' : karbohidrat_siang,
+        #             'energi_malam' :energi_malam,
                   
                   
-                    'protein_malam': protein_malam,
-                    'lemak_malam'  : lemak_malam,
-                    'kharbo_malam' : karbohidrat_malam,
+        #             'protein_malam': protein_malam,
+        #             'lemak_malam'  : lemak_malam,
+        #             'kharbo_malam' : karbohidrat_malam,
                     
                     
                     
-            }    
+        #     }    
         
-            doc.render(context=context)
-            doc.save(f'{nama}.docx')
-            st.success('SUKSES MEMBUAT LAPORAN')
+        #     doc.render(context=context)
+        #     doc.save(f'{nama}.docx')
+        #     st.success('SUKSES MEMBUAT LAPORAN')

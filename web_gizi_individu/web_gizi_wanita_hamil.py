@@ -139,91 +139,91 @@ def web_gizi_wanita_hamil():
                     lemak   = st.success(f'LEMAK : {lemak_malam}')
                     kharbo  = st.success(f'KHARBOHIDRAT : {kharbohidrat_malam}')
         
-        st.write('---------------------------------------------------------')
+        # st.write('---------------------------------------------------------')
         
-        if st.form_submit_button('LAPORAN'):
+        # if st.form_submit_button('LAPORAN'):
             
-            if trisemester == 'TRI SEMESTER 1':
-                energiplus = 180
-                proteinplus = 1
-                lemakplus = 2.3
-                karboplus = 25
+        #     if trisemester == 'TRI SEMESTER 1':
+        #         energiplus = 180
+        #         proteinplus = 1
+        #         lemakplus = 2.3
+        #         karboplus = 25
                 
-            elif trisemester == 'TRI SEMESTER 2':
-                energiplus = 300
-                proteinplus = 10
-                lemakplus = 2.3
-                karboplus = 40
+        #     elif trisemester == 'TRI SEMESTER 2':
+        #         energiplus = 300
+        #         proteinplus = 10
+        #         lemakplus = 2.3
+        #         karboplus = 40
                 
-            elif trisemester == 'TRI SEMESTER 3':
-                energiplus = 300
-                proteinplus = 30
-                lemakplus = 2.3
-                karboplus = 40
+        #     elif trisemester == 'TRI SEMESTER 3':
+        #         energiplus = 300
+        #         proteinplus = 30
+        #         lemakplus = 2.3
+        #         karboplus = 40
                 
             
-            if tinggi <=160:
-                tb_code = 105
+        #     if tinggi <=160:
+        #         tb_code = 105
                 
-            elif tinggi >=160:
-                tb_code = 110
+        #     elif tinggi >=160:
+        #         tb_code = 110
                                 
                  
         
-            doc    = DocxTemplate('web_gizi_individu/IBU HAMIL.docx')
+        #     doc    = DocxTemplate('web_gizi_individu/IBU HAMIL.docx')
             
-            context = {
-                    'nama'    : nama, 
-                    'usia'    : f'{usia} ',  
-                    'berat'   : f'{berat} ', 
-                    'tinggi'  : f'{tinggi} ',
-                    'tb_code' : f'{tb_code}',
+        #     context = {
+        #             'nama'    : nama, 
+        #             'usia'    : f'{usia} ',  
+        #             'berat'   : f'{berat} ', 
+        #             'tinggi'  : f'{tinggi} ',
+        #             'tb_code' : f'{tb_code}',
                   
                   
-                    'imt'     : imt,
-                    'bbi'     : f'{bbi}',
-                    'bmr'     : f'{bmr}',
-                    'tidur'   : f'{tidur}',
-                    'ktidur'  : f'{ktidur}',
-                    'c'       : f'{c}',
-                    'aktivitas' : f'{persen_aktivitas}',
-                    'aktivitas_fisik' : f'{aktivitas_fisik}',
-                    "e"       : f'{e}',
-                    'sda'     : f'{sda}',
-                    'trimester' : f'{trisemester}',
-                    'usia_hamil' : f'{usia_kehamilan}',
+        #             'imt'     : imt,
+        #             'bbi'     : f'{bbi}',
+        #             'bmr'     : f'{bmr}',
+        #             'tidur'   : f'{tidur}',
+        #             'ktidur'  : f'{ktidur}',
+        #             'c'       : f'{c}',
+        #             'aktivitas' : f'{persen_aktivitas}',
+        #             'aktivitas_fisik' : f'{aktivitas_fisik}',
+        #             "e"       : f'{e}',
+        #             'sda'     : f'{sda}',
+        #             'trimester' : f'{trisemester}',
+        #             'usia_hamil' : f'{usia_kehamilan}',
                   
                   
-                    'energi'  : f'{total_energi}',
-                    'protein' : f'{protein}',
-                    'lemak'   : f'{lemak}',
-                    'kharbo'  : f'{karbohidrat}',
-                    'energiplus' : f'{energiplus}',
-                    'proteinplus' : f'{proteinplus}',
-                    'lemakplus' : f'{lemakplus}',
-                    'karboplus' : f'{karboplus}',
-                    'cairan'  : f"{cairan}",
+        #             'energi'  : f'{total_energi}',
+        #             'protein' : f'{protein}',
+        #             'lemak'   : f'{lemak}',
+        #             'kharbo'  : f'{karbohidrat}',
+        #             'energiplus' : f'{energiplus}',
+        #             'proteinplus' : f'{proteinplus}',
+        #             'lemakplus' : f'{lemakplus}',
+        #             'karboplus' : f'{karboplus}',
+        #             'cairan'  : f"{cairan}",
                   
                   
-                    'energi_pagi'  :energi_pagi,
-                    'protein_pagi' : protein_pagi,
-                    'lemak_pagi'   : lemak_pagi,
-                    'kharbo_pagi'  : kharbohidrat_pagi,
+        #             'energi_pagi'  :energi_pagi,
+        #             'protein_pagi' : protein_pagi,
+        #             'lemak_pagi'   : lemak_pagi,
+        #             'kharbo_pagi'  : kharbohidrat_pagi,
                   
                   
-                    'energi_siang' :energi_siang,
-                    'protein_siang': protein_siang,
-                    'lemak_siang'  : lemak_siang,
-                    'kharbo_siang' : kharbohidrat_siang,
-                    'energi_malam' :energi_malam,
+        #             'energi_siang' :energi_siang,
+        #             'protein_siang': protein_siang,
+        #             'lemak_siang'  : lemak_siang,
+        #             'kharbo_siang' : kharbohidrat_siang,
+        #             'energi_malam' :energi_malam,
                   
                   
-                    'protein_malam': protein_malam,
-                    'lemak_malam'  : lemak_malam,
-                    'kharbo_malam' : kharbohidrat_malam,
-                    'tanggal'      : tanggal
-                    }
+        #             'protein_malam': protein_malam,
+        #             'lemak_malam'  : lemak_malam,
+        #             'kharbo_malam' : kharbohidrat_malam,
+        #             'tanggal'      : tanggal
+        #             }
                 
-            doc.render(context=context)
-            doc.save(f'{nama}.docx')
-            st.success('SUKSES MEMBUAT LAPORAN')
+        #     doc.render(context=context)
+        #     doc.save(f'{nama}.docx')
+        #     st.success('SUKSES MEMBUAT LAPORAN')

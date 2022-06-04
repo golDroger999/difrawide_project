@@ -114,62 +114,62 @@ def web_mifflin():
     
         
         
-        st.write('''---------------------------------''')
+        # st.write('''---------------------------------''')
         
-        if st.form_submit_button('LAPORAN'):
-            # st.error('SEDANG DALAM PENGEMBANGAN')
+        # if st.form_submit_button('LAPORAN'):
+        #     # st.error('SEDANG DALAM PENGEMBANGAN')
             
-            if gender == 'pria':
-                plus = 5
+        #     if gender == 'pria':
+        #         plus = 5
             
-            elif gender == 'wanita':
-                plus = 161
+        #     elif gender == 'wanita':
+        #         plus = 161
                 
-            doc = DocxTemplate('web_gizi_individu/MIFFLIN.docx')
+        #     doc = DocxTemplate('web_gizi_individu/MIFFLIN.docx')
             
-            context = {
-                    'nama'    : nama, 
-                    'usia'    : f'{usia} ',
-                    'tanggal': tanggal,
-                    'sex'     : gender , 
-                    'berat'   : f'{berat} ', 
-                    'tinggi'  : f'{tinggi} ',
+        #     context = {
+        #             'nama'    : nama, 
+        #             'usia'    : f'{usia} ',
+        #             'tanggal': tanggal,
+        #             'sex'     : gender , 
+        #             'berat'   : f'{berat} ', 
+        #             'tinggi'  : f'{tinggi} ',
                     
                     
-                    'bbi'     : bbi,
-                    'imt'     : imt,
-                    'bmr'       : bmr,
-                    'aktivitas' : aktivitas,
-                    'energi'       : energi, 
-                    'protein' : f'{protein}',
-                    'lemak'   : f'{lemak}',
-                    'kharbo'  : f'{karbohidrat}',
-                    'plus'    : plus,
-                    # 'cairan'  : f"{cairan}",
+        #             'bbi'     : bbi,
+        #             'imt'     : imt,
+        #             'bmr'       : bmr,
+        #             'aktivitas' : aktivitas,
+        #             'energi'       : energi, 
+        #             'protein' : f'{protein}',
+        #             'lemak'   : f'{lemak}',
+        #             'kharbo'  : f'{karbohidrat}',
+        #             'plus'    : plus,
+        #             # 'cairan'  : f"{cairan}",
                     
                     
-                    'energi_pagi'  :energi_pagi,
-                    'protein_pagi' : protein_pagi,
-                    'lemak_pagi'   : lemak_pagi,
-                    'kharbo_pagi'  : kharbohidrat_pagi,
+        #             'energi_pagi'  :energi_pagi,
+        #             'protein_pagi' : protein_pagi,
+        #             'lemak_pagi'   : lemak_pagi,
+        #             'kharbo_pagi'  : kharbohidrat_pagi,
                     
                     
-                    'energi_siang' :energi_siang,
-                    'protein_siang': protein_siang,
-                    'lemak_siang'  : lemak_siang,
-                    'kharbo_siang' : kharbohidrat_siang,
+        #             'energi_siang' :energi_siang,
+        #             'protein_siang': protein_siang,
+        #             'lemak_siang'  : lemak_siang,
+        #             'kharbo_siang' : kharbohidrat_siang,
                     
                     
-                    'energi_malam' :energi_malam,
-                    'protein_malam': protein_malam,
-                    'lemak_malam'  : lemak_malam,
-                    'kharbo_malam' : kharbohidrat_malam,
+        #             'energi_malam' :energi_malam,
+        #             'protein_malam': protein_malam,
+        #             'lemak_malam'  : lemak_malam,
+        #             'kharbo_malam' : kharbohidrat_malam,
                     
-            }
+        #     }
             
-            doc.render(context=context)
-            doc.save(f'{nama}.docx')
-            st.success('SUKSES MEMBUAT LAPORAN')
+        #     doc.render(context=context)
+        #     doc.save(f'{nama}.docx')
+        #     st.success('SUKSES MEMBUAT LAPORAN')
             
 
             

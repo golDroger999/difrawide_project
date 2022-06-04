@@ -138,65 +138,65 @@ def web_perkeni_2015():
     
         
         
-        st.write('''---------------------------------''')
+        # st.write('''---------------------------------''')
         
-        if st.form_submit_button('LAPORAN'):
+        # if st.form_submit_button('LAPORAN'):
         
-            if gender == 'pria':
-                bmrcode = 30
+        #     if gender == 'pria':
+        #         bmrcode = 30
                 
-            elif gender == 'wanita':
-                bmrcode = 25 
+        #     elif gender == 'wanita':
+        #         bmrcode = 25 
                 
                 
                 
                 
             
-            doc = DocxTemplate('web_gizi_individu/PERKENI.docx')
+        #     doc = DocxTemplate('web_gizi_individu/PERKENI.docx')
             
-            context = {
-                    'nama'    : nama, 
-                    'usia'    : f'{usia}',
-                    'tanggal': tanggal,
-                    'sex'     : gender , 
-                    'berat'   : f'{berat} ', 
-                    'tinggi'  : f'{tinggi} ',
+        #     context = {
+        #             'nama'    : nama, 
+        #             'usia'    : f'{usia}',
+        #             'tanggal': tanggal,
+        #             'sex'     : gender , 
+        #             'berat'   : f'{berat} ', 
+        #             'tinggi'  : f'{tinggi} ',
                     
                     
-                    'bbi'     : bbi,
-                    'imt'     : imt,
-                    'faktor_usia' : usia,
-                    'bmr' : bmr,
-                    'bmrcode' : bmrcode,
-                    'aktivitas' : persen_aktivitas,
+        #             'bbi'     : bbi,
+        #             'imt'     : imt,
+        #             'faktor_usia' : usia,
+        #             'bmr' : bmr,
+        #             'bmrcode' : bmrcode,
+        #             'aktivitas' : persen_aktivitas,
                     
                     
                     
-                    'energi' : energi,
-                    'protein' : f'{protein}',
-                    'lemak'   : f'{lemak}',
-                    'kharbo'  : f'{karbohidrat}',
+        #             'energi' : energi,
+        #             'protein' : f'{protein}',
+        #             'lemak'   : f'{lemak}',
+        #             'kharbo'  : f'{karbohidrat}',
                     
-                    'energi_pagi'  :energi_pagi,
-                    'protein_pagi' : protein_pagi,
-                    'lemak_pagi'   : lemak_pagi,
-                    'kharbo_pagi'  : kharbohidrat_pagi,
-                    
-                    
-                    'energi_siang' :energi_siang,
-                    'protein_siang': protein_siang,
-                    'lemak_siang'  : lemak_siang,
-                    'kharbo_siang' : kharbohidrat_siang,
+        #             'energi_pagi'  :energi_pagi,
+        #             'protein_pagi' : protein_pagi,
+        #             'lemak_pagi'   : lemak_pagi,
+        #             'kharbo_pagi'  : kharbohidrat_pagi,
                     
                     
-                    'energi_malam' :energi_malam,
-                    'protein_malam': protein_malam,
-                    'lemak_malam'  : lemak_malam,
-                    'kharbo_malam' : kharbohidrat_malam,
+        #             'energi_siang' :energi_siang,
+        #             'protein_siang': protein_siang,
+        #             'lemak_siang'  : lemak_siang,
+        #             'kharbo_siang' : kharbohidrat_siang,
+                    
+                    
+        #             'energi_malam' :energi_malam,
+        #             'protein_malam': protein_malam,
+        #             'lemak_malam'  : lemak_malam,
+        #             'kharbo_malam' : kharbohidrat_malam,
             
-            }
+        #     }
             
-            doc.render(context=context)
-            doc.save(f'{nama}.docx')
-            st.success('SUKSES MEMBUAT LAPORAN')
+        #     doc.render(context=context)
+        #     doc.save(f'{nama}.docx')
+        #     st.success('SUKSES MEMBUAT LAPORAN')
             
