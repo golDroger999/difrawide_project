@@ -32,19 +32,15 @@ def pilihan_rumus_gizi_individu():
         with st.expander('PILIH JENIS RUMUS'):
 
             pilih_form = st.radio('',
-                                    ('CEK BIOKIMIA',  
+                                    (  
                                     'RUMUS PERKENI 2015 (DIABETES)',
                                     'RUMUS MIFFLIN (BIASA DIGUNAKAN DIETESIAN RS)',
                                     'RUMUS GGK/CKD/CRF (RUMUS KEBUTUHAN GIZI UNTUK PENYAKIT GINJAL)')
                                     )
         
         st.write('-----------------------------------------------------------')
-    
-        if pilih_form == 'CEK BIOKIMIA':
-            st.subheader('CEK BIOKIMIA')
-            web_cek_biokimia()
         
-        elif pilih_form == 'RUMUS PERKENI 2015 (DIABETES)':
+        if pilih_form == 'RUMUS PERKENI 2015 (DIABETES)':
             st.subheader('RUMUS PERKENI 2015 (DIABETES)')
             web_perkeni_2015()
         

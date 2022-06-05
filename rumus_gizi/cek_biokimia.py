@@ -1,10 +1,12 @@
 class cek_biokimia:
     
     def cek_hb(hb):
-        # if hb == 11:
+        # if hb < 13.0:
         #     hasil = 'NORMAL'
             
         # elif hb > 11:
+            
+            
             
         return 0 
     
