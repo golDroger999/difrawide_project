@@ -10,7 +10,7 @@ from web_gizi_individu.web_gizi_wanita_menyusui import web_gizi_wanita_menyusui
 from web_gizi_individu.web_mifflin import web_mifflin
 from web_gizi_individu.web_perkeni_2015 import web_perkeni_2015
 from web_gizi_individu.web_gizi_ginjal import web_ginjal
-from web_gizi_individu.web_cek_biokimia import web_cek_biokimia
+# from web_gizi_individu.web_cek_biokimia import web_cek_biokimia
 
 
 
